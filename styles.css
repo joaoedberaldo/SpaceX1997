@@ -1,0 +1,282 @@
+body {
+  font-family: "Times New Roman", serif;
+  background: #C0C0C0;
+  color: black;
+  margin: 0;
+  padding: 0;
+  position: relative; /* Ensures pseudo-elements align properly */
+}
+
+body::before,
+body::after {
+  content: ""; /* Required for pseudo-elements */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 180px; /* Adjust as needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1; /* Places images behind the content */
+}
+
+body::before {
+  left: 0; /* Image on the left side */
+  background-image: url('src/Assets/stars.jpg'); /* Replace with your left image path */
+}
+
+body::after {
+  right: 0; /* Image on the right side */
+  background-image: url('src/Assets/stars.jpg'); /* Replace with your right image path */
+}
+
+/* Stars Background */
+.stars {
+  position: absolute;
+  height: 20px;
+  top: 0px;
+  left: 0px;
+}
+
+/* Header with the Grid Navigation */
+.header-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  margin: 10px auto;
+  padding: 10px;
+  width: 680px;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 595px;
+}
+
+.header-grid a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  background: transparent;
+  padding: 10px;
+  display: block;
+  height: 140px;
+  width: 115px;
+}
+
+.header-grid a:hover {
+  background: #A0A0A0;
+}
+
+.header-grid #inv {
+  background-color: transparent;
+}
+
+/* Logo Section */
+.logo {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.logo img {
+  width: 720px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+hr {
+  border: 1px solid black;
+  margin: 10px auto;
+  width: 80%;
+}
+
+/* Main Content */
+.main-content {
+  width: 80%;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+.main-content a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.main-content a:hover {
+  color: red;
+}
+
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  color: black;
+}
+.back-link:hover {
+  color: red;
+}
+.starlink-container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  line-height: 1.8;
+  font-family: "Times New Roman", serif;
+  color: black;
+}
+
+.starlink-container h1 {
+  font-size: 32px;
+  margin: 20px 0;
+}
+.starlink-container h2 {
+  font-size: 24px;
+  margin: 20px 0 10px;
+  text-align: left;
+}
+
+.starlink-container p {
+  font-size: 18px;
+  text-align: justify;
+  margin: 10px 0;
+}
+
+.starlink-features {
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid black;
+  background-color: #F0F0F0;
+  text-align: left;
+}
+
+.starlink-features li {
+  margin: 10px 0;
+}
+.mars-section {
+  margin: 20px 0;
+}
+
+.mars-section h2 {
+  font-size: 26px;
+  color: #B22222; /* Mars red color */
+  margin-bottom: 10px;
+}
+
+.mars-section p {
+  margin-bottom: 15px;
+}
+
+.gallery-container {
+  width: 80%;
+  margin: 20px auto;
+  font-family: "Times New Roman", serif;
+  color: black;
+  text-align: center;
+}
+
+.gallery-container h1 {
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.gallery-item p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 300px;
+  margin: 20px 0;
+}
+
+.about-container h1 {
+  font-size: 32px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.about-container h2 {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+.about-container p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-container img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.team-section {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.team-member {
+  flex: 1 1 calc(30% - 20px);
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.team-member img {
+  width: 60%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.team-member p {
+  font-size: 14px;
+}
